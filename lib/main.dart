@@ -43,6 +43,7 @@ class _MyCalculatorState extends State<MyCalculator> {
         expression = equation;
         expression = expression.replaceAll('x', '*');
         expression = expression.replaceAll('÷', '/');
+        expression = expression.replaceAll('÷', '+');
 
         try {
           Parser p = Parser();
@@ -185,7 +186,7 @@ class _MyCalculatorState extends State<MyCalculator> {
                       CalBtn("2", Colors.white, 80, Colors.white10!),
                       CalBtn("3", Colors.white, 80, Colors.white10!),
                       CalBtn(
-                          "÷", Colors.white, 80, Colors.deepOrangeAccent[100]!),
+                          "+", Colors.white, 80, Colors.deepOrangeAccent[100]!),
                     ],
                   ),
                   SizedBox(
